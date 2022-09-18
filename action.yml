@@ -27,7 +27,7 @@ runs:
           ls -lrt
           ls -lrt "${GITHUB_WORKSPACE}"
           #ls -lrt " ${{ github.action_path }}"
-          #      chmod +x  "${{ github.action_path }}goodbye.sh" 
-          # "${GITHUB_WORKSPACE}//goodbye.sh"
+          chmod +x  goodbye.sh 
+          ./goodbye.sh
       shell: bash
 
