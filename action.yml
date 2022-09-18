@@ -13,6 +13,9 @@ runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v3
+      with:
+         repository: gonzape27/actions-test
+
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
     - id: random-number-generator
