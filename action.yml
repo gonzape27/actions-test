@@ -13,7 +13,6 @@ runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v3
-          
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
     - id: random-number-generator
@@ -24,8 +23,8 @@ runs:
     - run: |
           ls -lrt
           ls -lrt "${GITHUB_WORKSPACE}"
-          ls -lrt " ${{ github.action_path }}"
-          chmod +x  "${{ github.action_path }}goodbye.sh" 
-           "${GITHUB_WORKSPACE}//goodbye.sh"
+          #ls -lrt " ${{ github.action_path }}"
+          #      chmod +x  "${{ github.action_path }}goodbye.sh" 
+          # "${GITHUB_WORKSPACE}//goodbye.sh"
       shell: bash
 
